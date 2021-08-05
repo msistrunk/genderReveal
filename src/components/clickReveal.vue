@@ -2,7 +2,7 @@
   <div class="scroll">
     <h1>{{ message }}</h1>
     <button class="button" v-if="showButton" v-on:click="count++">click</button>
-    <img v-else src="~@/assets/ultrasound.jpg" height='377px' width='497px' style="border-radius: 25px" />
+    <img v-else src="~@/assets/ultrasound.jpg" height='283px' width='373px' style="border-radius: 25px" />
   </div>
 </template>
 
@@ -23,20 +23,20 @@ export default {
         this.message = "Click the button to reveal!";
       } else if (val == 1) {
         this.message = "keep clicking!!!";
-      } else if (val > 70) {
+      } else if (val > 30) {
         this.message = "IT'S A BOY!";
         this.showButton = false;
-      } else if (val > 60) {
+      } else if (val > 25) {
         this.message = "here it is!";
-      } else if (val > 50) {
-        this.message = "ok really almost there!";
-      } else if (val > 40) {
-        this.message = "getting tired yet?";
-      } else if (val > 30) {
-        this.message = "getting closer!";
       } else if (val > 20) {
-        this.message = "almost there!!!";
+        this.message = "ok really almost there!";
+      } else if (val > 15) {
+        this.message = "getting tired yet?";
+      } else if (val > 10) {
+        this.message = "getting closer!";
       } else if (val > 5) {
+        this.message = "almost there!!!";
+      } else if (val > 3) {
         this.message = "keep going!!!";
       }
     },
